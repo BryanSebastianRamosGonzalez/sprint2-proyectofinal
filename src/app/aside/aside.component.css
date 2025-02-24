@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    height: 100vh;
+}
+
+.lista {
+    padding-top: 50px;
+}
+
+.lista ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista li {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.lista a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.lista a i {
+    margin-right: 10px;
+}
+
+.lista a:hover {
+    background-color: #ffcccc;
+}
+
+.config {
+    margin-bottom: 20px;
+}
+
+.config a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.config a i {
+    margin-right: 10px;
+}
+
+.config a:hover {
+    background-color: #ffcccc;
+}

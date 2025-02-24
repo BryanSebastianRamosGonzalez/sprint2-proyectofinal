@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    align-items: center ;
+}
+.logo img{
+    width: 150px;
+}
+.p a{
+    list-style: none;
+    text-decoration: none;
+    color: aliceblue;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+}
+footer img{
+    width: 35px;
+    padding: 5px 5px 5px ;
+}
+hr{
+    width: 80%;
+}

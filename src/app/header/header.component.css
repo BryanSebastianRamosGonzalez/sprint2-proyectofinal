@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    background-color: black;
+}
+.img img {
+    margin-left: auto;
+    width: 75px;
+    padding-right: 150px;
+    padding-left: 50px;
+}
+h1{
+    color: aliceblue;
+}

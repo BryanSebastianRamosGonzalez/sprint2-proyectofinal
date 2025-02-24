@@ -1,0 +1,57 @@
+<div class="superior"></div>
+<div class="container">
+    <div class="content">
+        <div class="arrriba">
+            <div class="selection">
+                <select (change)="onSelectionChange($event)" [(ngModel)]="selectedOption">
+                    <option value="catalogoList">Hidratación</option>
+                    <option value="catalogoList1">Textil</option>
+                    <option value="catalogoList2">Mantenimiento</option>
+                </select>
+            </div>
+            <div class="agregar">
+                <div class="imagenes">
+                    <input type="file" (change)="onFileChange($event)" id="cuadro" placeholder="">
+                    <img *ngIf="selectedImage" [src]="selectedImage" alt="Selected Image" />
+                </div>
+                <div class="medio">
+                    <input type="text" [(ngModel)]="newProduct.title" placeholder="Titulo">
+                    <input type="number" [(ngModel)]="newProduct.cost" placeholder="Precio">
+                    <input type="number" [(ngModel)]="newProduct.total" placeholder="Cantidad">
+                </div>
+                <div class="des">
+                    <input type="text" [(ngModel)]="newProduct.description" placeholder="Descripción">
+                </div>
+            </div>
+            <div class="button">
+                <button (click)="cancel()">Cancelar</button>
+                <button (click)="addNew()">Agregar</button>
+            </div>
+        </div>
+        <hr>
+        <div class="mostrar">
+            <div class="aqui" *ngFor="let item of selectedCatalogo">
+                <div class="image-container">
+                    <img [src]="item.img" alt="{{item.title}}" />
+                </div>
+                <div class="title-description">
+                    <h3>{{item.title}}</h3>
+                    <p>{{item.description}}</p>
+                </div>
+                <div class="quantity-controls">
+                    <button (click)="decreaseQuantity(item)">-</button>
+                    <span>{{item.total}}</span>
+                    <button (click)="increaseQuantity(item)">+</button>
+                </div>
+                <div class="total-cost">
+                    <p>Total: {{item.total}}</p>
+                    <p>Total Price: {{getTotalCost(item)}} MXN</p>
+                </div>
+                <div class="status">
+                    <p>Status: {{getStatus(item)}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="asideb"></div>
+</div>
